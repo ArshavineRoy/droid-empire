@@ -5,9 +5,204 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f2f2f2;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+/* container div */
+.navbar-brand {
+  color: #d65693; 
+  font-weight: bold;
+}
+
+.login {
+  background-color: #d65693;
+  color: #fff;
+}
+.sort {
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* d-flex sort inside */
+.sort .d-flex {
+  align-items: center;
+}
+
+/* "Sort By" heading */
+.sort h4 {
+  margin: 0 10px 0 0;
+  font-size: 18px;
+}
+
+/* select element */
+.sort select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  margin-right: 10px;
+  /* max-width: 200px; */
+}
+
+/* filter icon */
+.sort .fa-filter {
+  font-size: 24px;
+  color: #d30993;
+  cursor: pointer;
+  margin-left: 10px;
+
+}
+
+.filter {
+  display: none;
+  border: 1px dotted black;
+  padding: 30px;
+
+}
+
+.filter.active {
+  display: block;
+}
+
+/* sorting button */
+#swap-sort-order-button {
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* up and down arrow icons */
+#swap-sort-order-button svg {
+  width: 24px;
+  height: 24px;
+  fill: inherit; /* Icon color, same as button text color */
+}
+
+/* Hover effects for the sorting button */
+#swap-sort-order-button:hover {
+  background-color: #ffff;
+}
+
+.filter input[type='checkbox'],
+label {
+  font-size: 16px;
+}
+
+.display-bots {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.card {
+  width: 250px;
+  /* background-color: #64686C; */
+}
+
+.bot-specs {
+  cursor: pointer;
+}
+
+/* Bot health, damage, armor details*/
+
+.bot-info li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  color: #1f2951;
+}
+
+.bot-modal {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2%;
+}
+
+.bot-modal img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+/* border: 1px solid blue; */
+}
+
+.bot-modal-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 5%;
+
+}
+
+.modal-dialog {
+  max-width: 650px;
+  width: 750px;
+  height: 650px;
+}
+
+/* Modal content custom styling */
+.modal-content {
+ 
+
+}
+
+.bot-modal-hda {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  padding: 5px;
+  padding-bottom: 40px;
+
+}
+
+/* footer */
+.footer {
+  margin-top: 3%;
+  background-color: #1c2331;
+}
+
+/* social media section background */
+.social-media-bg {
+  background-color: #d30993;
+}
+
+/* hr */
+.custom-hr {
+  width: 60px;
+  background-color: #7c4dff;
+  height: 2px;
+}
+
+/* footer links */
+.custom-link {
+  color: #fff;
+}
+
+/* footer contact information */
+.custom-contact {
+  margin-right: 3px;
+}
+
+/* copyright section background */
+.footer-copyright-bg {
+  background-color: rgba(0, 0, 0, 0.2);
 }
