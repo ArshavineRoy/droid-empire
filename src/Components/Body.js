@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import BotCollection from "./BotCollection";
 import Sort from "./Sort";
 import Favorites from "./Favorites";
+import Army from "./Army";
 
 
 function Body (){
@@ -24,6 +25,7 @@ function Body (){
             <Sort />
             <BotCollection bots={bots} setBot={setBots}/>
             <Favorites bots={bots}/>
+            <Army />
 
         </section>
     )
