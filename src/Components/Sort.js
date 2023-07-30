@@ -1,35 +1,34 @@
+import React, { useState } from 'react';
+import Filter from './Filter';
+
 function Sort (){
-    return (
-        <div
-        className="
-          container
-          my-5
-          d-flex
-          felx-row
-          justify-content-end
-          align-items-center
-          sort
-        "
-      >
+  const [filterVisible, setFilterVisible] = useState(false);
+
+  const handleFilterToggle = () => {
+    // console.log("Filter icon clicked");
+    setFilterVisible(!filterVisible);
+  };
+  
+
+  return (
+    <>
+      <div className="container my-5 d-flex felx-row justify-content-end align-items-center sort">
         <div className="d-flex">
           <h4>Sort by</h4>
           <div>
-            <select id="sortingSelect">
-              <option value=""></option>
-              <option value="support">Support</option>
-              <option value="medic">Medic</option>
-              <option value="assault">Assault</option>
-              <option value="defender">Defender</option>
-              <option value="captain">Captain</option>
-              <option value="witch">Witch</option>
-            </select>
-          </div>
-
+              <select id="sortingSelect">
+                <option value=""></option>
+                <option value="support">Support</option>
+                <option value="medic">Medic</option>
+                <option value="assault">Assault</option>
+                <option value="defender">Defender</option>
+                <option value="captain">Captain</option>
+                <option value="witch">Witch</option>
+              </select>
+            </div>
           <button
             id="swap-sort-order-button"
-            className="
-              ipc-icon-button ipc-icon-button--base ipc-icon-button--onBase
-            "
+            className="ipc-icon-button ipc-icon-button--base ipc-icon-button--onBase"
             title="Change sort by direction"
             role="button"
             tabIndex="0"
@@ -55,10 +54,14 @@ function Sort (){
         <i
           className="fa-solid fa-filter"
           id="filter-icon"
+          onClick={handleFilterToggle} // Handle click on the filter icon
         ></i>
       </div>
-    )
-}
-
+      {filterVisible && (
+        < Filter />
+      )}
+    </>
+  );
+};
 
 export default Sort;

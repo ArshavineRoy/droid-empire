@@ -29,40 +29,5 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-
-        <!-- filter div script -->
-        <script>
-          // JavaScript code to toggle the visibility of the filter div
-          document
-            .getElementById('filter-icon')
-            .addEventListener('click', function () {
-              var filterDiv = document.getElementById('filterContent');
-              filterDiv.classList.toggle('active');
-            });
-        </script>
-    
-        <!-- modal script -->
-        <script>
-          // Get all elements with class "bot-specs"
-          const botSpecsElements = document.querySelectorAll(".bot-specs");
-        
-          // Get the modal element
-          const botModal = document.getElementById("botModal");
-        
-          // Function to handle click events on elements with class "bot-specs"
-          function handleBotSpecsClick(event) {
-            // Prevent the default behavior of the clicked element (e.g., prevent links from navigating)
-            event.preventDefault();
-        
-            // Show the modal
-            const modal = new bootstrap.Modal(botModal);
-            modal.show();
-          }
-        
-          // Attach the click event handler to each element with class "bot-specs"
-          botSpecsElements.forEach((element) => {
-            element.addEventListener("click", handleBotSpecsClick);
-          });
-        </script>
   </body>
 </html>

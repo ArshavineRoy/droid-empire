@@ -109,14 +109,10 @@ code {
 }
 
 .filter {
-  display: none;
+  display: block;
   border: 1px dotted black;
   padding: 30px;
 
-}
-
-.filter.active {
-  display: block;
 }
 
 /* sorting button */
