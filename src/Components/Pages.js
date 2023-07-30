@@ -21,7 +21,11 @@ function Pages (){
 
     function addToFavorites(bot) {
         setFavorites((prevFavorites) => [...prevFavorites, bot]);
-      }
+    }
+
+    function removeFromFavorites(botId) {
+    setFavorites((prevFavorites) => prevFavorites.filter((bot) => bot.id !== botId));
+    }
 
     return (
     
@@ -29,7 +33,7 @@ function Pages (){
             <Sort />
             <Routes>
                 <Route path="/" element={<BotCollection bots={bots} setBot={setBots} addToFavorites={addToFavorites}/>}></Route>
-                <Route path="/favorites" element={<Favorites favorites={favorites}/>}></Route>
+                <Route path="/favorites" element={<Favorites favorites={favorites} removeFromFavorites={removeFromFavorites}/>}></Route>
                 <Route path="/army" element={<Army />}></Route>
             </Routes>
 
