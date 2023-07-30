@@ -1,6 +1,10 @@
 import React from 'react';
 
-function Army ({army}){
+function Army ({army, dischargeFromArmy}){
+
+    function alertOnDischarge(name){
+        alert(`${name} successfully discharged.`);
+    }
 
     return (
         <>
@@ -15,7 +19,7 @@ function Army ({army}){
                             className="card-img-top bot-specs"
                             alt="bot image"
                         />
-                        <div className="card-body bot-specs">
+                        <div className="card-body card-name bot-specs">
                             <h5 className="card-title">{name} <span>{bot_class}</span></h5>
                             <p className="card-text">{catchphrase}</p>
                         </div>
@@ -27,7 +31,14 @@ function Army ({army}){
                             </li>
                         </ul>
                         <div className="card-body d-flex justify-content-between">
-                            <a href="#" className="btn btn-danger">Discharge</a>
+                            <a href="#" className="btn btn-danger" onClick={(e)=>{
+                                e.preventDefault();
+                                dischargeFromArmy(id);
+                                alertOnDischarge(name);
+                            }}                                
+                            >
+                               Discharge
+                            </a>
                         </div>
                     </div>
 

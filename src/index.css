@@ -171,6 +171,9 @@ label {
   /* background-color: #64686C; */
 }
 
+.card-name {
+  height: 100px;
+} 
 .bot-specs {
   cursor: pointer;
 }

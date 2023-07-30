@@ -10,7 +10,7 @@ function Favorites({ favorites, removeFromFavorites, addToArmy }) {
                         className="card-img-top bot-specs"
                         alt="bot imgae"                
                     />
-                    <div className="card-body bot-specs">
+                    <div className="card-body card-name bot-specs">
                         <h5 className="card-title">{name}  <span>{bot_class}</span></h5>
                         <p className="card-text">{catchphrase}</p>
                     </div>

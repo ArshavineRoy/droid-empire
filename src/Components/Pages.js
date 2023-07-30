@@ -32,6 +32,10 @@ function Pages (){
         setArmy((prevArmy) => [...prevArmy, bot]);
     }
 
+    function dischargeFromArmy(botId){
+        setArmy((prevArmy) => prevArmy.filter((bot) => bot.id !== botId))
+    }
+
     return (
     
         <section className="container bot-container px-0">
@@ -39,7 +43,7 @@ function Pages (){
             <Routes>
                 <Route path="/" element={<BotCollection bots={bots} setBot={setBots} addToFavorites={addToFavorites} addToArmy={addToArmy} />}></Route>
                 <Route path="/favorites" element={<Favorites favorites={favorites} removeFromFavorites={removeFromFavorites} addToArmy={addToArmy} />}></Route>
-                <Route path="/army" element={<Army army={army} />}></Route>
+                <Route path="/army" element={<Army army={army} dischargeFromArmy={dischargeFromArmy} />}></Route>
             </Routes>
 
         </section>
