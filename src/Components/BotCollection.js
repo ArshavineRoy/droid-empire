@@ -25,7 +25,9 @@ function BotCollection ({ bots, addToFavorites }){
                             </ul>
                             <div className="card-body d-flex justify-content-between">
                                 <a href="#" className="btn btn-success">Enlist</a>
-                                <a href="#" className="btn btn-warning" onClick={() => addToFavorites({ id, name, bot_class, catchphrase, avatar_url })}>Favorite</a>
+                                <a href="#" className="btn btn-warning" onClick={(e) =>{ 
+                                    e.preventDefault();
+                                    addToFavorites({ id, name, bot_class, catchphrase, avatar_url })}}>Favorite</a>
                             </div>
                         </div>
                         )
