@@ -18,6 +18,12 @@ code {
 /* .bot-container{
   border: 1px solid blue;
 } */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
 .navbar-brand {
   color: #d65693; 
   font-weight: bold;

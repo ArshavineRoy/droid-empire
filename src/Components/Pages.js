@@ -18,8 +18,6 @@ function Pages (){
         .then (bots => setBots(bots))
     } 
 
-
-
     return (
     
         <section className="container bot-container px-0">

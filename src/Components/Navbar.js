@@ -1,3 +1,5 @@
+import { Link, NavLink } from "react-router-dom";
+
 function Navbar (){
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -19,32 +21,32 @@ function Navbar (){
                 <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul className="navbar-nav nav-underline me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="#">Home</a>
+                    <NavLink className="nav-link" aria-current="page" to="/">Home</NavLink>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="#">Favorites</a>
+                    <NavLink className="nav-link" to="/favorites">Favorites</NavLink>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="#">Your Army</a>
+                    <NavLink className="nav-link" to="/army">Your Army</NavLink>
                     </li>
                     <li className="nav-item dropdown">
-                    <a
+                    <Link
                         className="nav-link dropdown-toggle"
-                        href="#"
+                        to="/about-us"
                         role="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                     >
                         About Us
-                    </a>
+                    </Link>
                     <ul className="dropdown-menu">
-                        <li><a className="dropdown-item" href="#">Mission</a></li>
+                        <li><Link className="dropdown-item" to="/mission">Mission</Link></li>
                         <li><hr className="dropdown-divider" /></li>
-                        <li><a className="dropdown-item" href="#">Vision</a></li>
+                        <li><Link className="dropdown-item" to="/vision">Vision</Link></li>
                         <li><hr className="dropdown-divider" /></li>
-                        <li><a className="dropdown-item" href="#">Contact Us</a></li>
+                        <li><Link className="dropdown-item" to="/contact">Contact Us</Link></li>
                     </ul>
                     </li>
                     <li className="nav-item">
