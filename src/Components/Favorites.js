@@ -1,4 +1,4 @@
-function Favorites({ favorites, removeFromFavorites }) {
+function Favorites({ favorites, removeFromFavorites, addToArmy }) {
   return (
     <>
         <h3>Favorites</h3>
@@ -22,7 +22,10 @@ function Favorites({ favorites, removeFromFavorites }) {
                         </li>
                     </ul>
                     <div className="card-body d-flex justify-content-between">
-                        <a href="#" className="btn btn-success">
+                        <a href="#" className="btn btn-success" onClick={(e) => {
+                                e.preventDefault();
+                                addToArmy({ id, name, health, damage, armor, bot_class, catchphrase, avatar_url })}
+                            }>
                             Enlist
                         </a>
                         <a href="#" className="btn btn-info" onClick={(e) => {

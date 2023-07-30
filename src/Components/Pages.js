@@ -38,7 +38,7 @@ function Pages (){
             <Sort />
             <Routes>
                 <Route path="/" element={<BotCollection bots={bots} setBot={setBots} addToFavorites={addToFavorites} addToArmy={addToArmy} />}></Route>
-                <Route path="/favorites" element={<Favorites favorites={favorites} removeFromFavorites={removeFromFavorites}/>}></Route>
+                <Route path="/favorites" element={<Favorites favorites={favorites} removeFromFavorites={removeFromFavorites} addToArmy={addToArmy} />}></Route>
                 <Route path="/army" element={<Army army={army} />}></Route>
             </Routes>
 
