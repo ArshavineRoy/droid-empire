@@ -1,4 +1,4 @@
-function BotCollection ({bots}){
+function BotCollection ({ bots, addToFavorites }){
 
     return (
         <>
@@ -25,7 +25,7 @@ function BotCollection ({bots}){
                             </ul>
                             <div className="card-body d-flex justify-content-between">
                                 <a href="#" className="btn btn-success">Enlist</a>
-                                <a href="#" className="btn btn-warning">Favorite</a>
+                                <a href="#" className="btn btn-warning" onClick={() => addToFavorites({ id, name, bot_class, catchphrase, avatar_url })}>Favorite</a>
                             </div>
                         </div>
                         )
