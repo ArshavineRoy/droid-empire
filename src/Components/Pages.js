@@ -3,6 +3,7 @@ import BotCollection from "./BotCollection";
 import Sort from "./Sort";
 import Favorites from "./Favorites";
 import Army from "./Army";
+import { Route, Routes } from "react-router-dom";
 
 
 function Pages (){
@@ -23,9 +24,11 @@ function Pages (){
     
         <section className="container bot-container px-0">
             <Sort />
-            <BotCollection bots={bots} setBot={setBots}/>
-            <Favorites bots={bots}/>
-            <Army />
+            <Routes>
+                <Route path="/" element={<BotCollection bots={bots} setBot={setBots}/>}></Route>
+                <Route path="/favorites" element={<Favorites bots={bots}/>}></Route>
+                <Route path="/army" element={<Army />}></Route>
+            </Routes>
 
         </section>
     )
