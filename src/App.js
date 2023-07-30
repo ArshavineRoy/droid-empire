@@ -1,7 +1,7 @@
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import Carousel from "./Components/Carousel";
-import Body from "./Components/Body";
+import Pages from "./Components/Pages";
 import Footer from "./Components/Footer";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <>
        <Navbar />
        <Carousel />
-       <Body />
+       <Pages />
        <Footer/>
     </>
   )

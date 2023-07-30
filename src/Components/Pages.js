@@ -5,7 +5,7 @@ import Favorites from "./Favorites";
 import Army from "./Army";
 
 
-function Body (){
+function Pages (){
     const [bots, setBots] = useState([])
 
     useEffect(() => 
@@ -32,4 +32,4 @@ function Body (){
 }
 
 
-export default Body;
+export default Pages;
