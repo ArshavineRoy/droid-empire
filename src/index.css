@@ -34,6 +34,10 @@ code {
   color: #fff;
 }
 
+.login svg {
+  margin-right: 3px;
+}
+
 #carouselExampleAutoplaying {
   /* Set the height of the carousel container as needed */
   height: 500px; /* Adjust this value to fit your design */
@@ -153,14 +157,24 @@ label {
   margin-bottom: 30px;
 }
 
-.favorites {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 15px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+.favorites, .army {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
+
+.army {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .card {
   width: 250px;
   /* background-color: #64686C; */

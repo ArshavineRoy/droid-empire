@@ -1,36 +1,41 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function Army (){
-
-    const [army, setArmy] = useState([])
+function Army ({army}){
 
     return (
-        <div>
-        <h3>Your Army</h3>
-        <div className="army display-bots flex-wrap">
-            <div className="card">
-            <img
-                src="https://robohash.org/sedhicquo.png?size=300x300&set=set1"
-                className="card-img-top bot-specs"
-                alt="..."
-            />
-            <div className="card-body bot-specs">
-                <h5 className="card-title">wHz-93 <span>Class Icon</span></h5>
-                <p className="card-text">1010010101001101100011000111101</p>
+        <>
+            <h3>Your Army</h3>
+
+            <div className="army flex-wrap" >
+
+                {army.map(({ id, name, health, damage, armor, bot_class, catchphrase, avatar_url }) => (
+                    <div className="card" key={id}>
+                        <img
+                            src={avatar_url}
+                            className="card-img-top bot-specs"
+                            alt="bot image"
+                        />
+                        <div className="card-body bot-specs">
+                            <h5 className="card-title">{name} <span>{bot_class}</span></h5>
+                            <p className="card-text">{catchphrase}</p>
+                        </div>
+                        <ul className="list-group list-group-flush bot-info">
+                            <li className="list-group-item">
+                            <i className="fa-solid fa-heart-pulse" style={{ color: '#1f2951' }}> {health}</i>
+                            <i className="fa-solid fa-bolt-lightning"> {damage}</i>
+                            <i className="fa-solid fa-shield-halved"> {armor}</i>
+                            </li>
+                        </ul>
+                        <div className="card-body d-flex justify-content-between">
+                            <a href="#" className="btn btn-danger">Discharge</a>
+                        </div>
+                    </div>
+
+                )) }  
             </div>
-            <ul className="list-group list-group-flush bot-info">
-                <li className="list-group-item">
-                <i className="fa-solid fa-heart-pulse" style={{ color: '#1f2951' }}> 94</i>
-                <i className="fa-solid fa-bolt-lightning"> 20</i>
-                <i className="fa-solid fa-shield-halved"> 63</i>
-                </li>
-            </ul>
-            <div className="card-body d-flex justify-content-between">
-                <a href="#" className="btn btn-danger">Discharge</a>
-            </div>
-            </div>
-        </div>
-        </div>
+        </>
+
+
     );
 };
 
