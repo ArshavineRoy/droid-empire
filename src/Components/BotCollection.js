@@ -4,11 +4,13 @@ import getBotIcon from "./getBotIcon"; // Import the getBotIcon helper function
 
 function BotCollection ({ bots, addToFavorites, addToArmy, selectedFilters }){
 
-    const [isModalOpen, setModalOpen] = useState(false);
+    // const [isModalOpen, setModalOpen] = useState(false);
+    const [selectedBot, setSelectedBot] = useState(null);
 
     // Function to handle click events on bot specs
-    const handleBotSpecsClick = () => {
-      setModalOpen(true);
+    const handleBotSpecsClick = (bot) => {
+    //   setModalOpen(true);
+      setSelectedBot(bot);
     };
 
 
@@ -22,13 +24,14 @@ function BotCollection ({ bots, addToFavorites, addToArmy, selectedFilters }){
         <>
             <h3>Bot Collection</h3>
             <div className="collection display-bots flex-wrap" >
-                {filteredBots.length === 0 ? (<h3>No bots available at this time. </h3>) : (
+                {filteredBots.length === 0 ? (<h5>Loading bots...</h5>) : (
                     filteredBots.map(({id, name, health, damage, armor, bot_class, catchphrase, avatar_url}) => (
-                        <div className="card" key={id} onClick={handleBotSpecsClick}>
+                        <div className="card" key={id}>
                             <img 
                                 src={avatar_url}
                                 className="card-img-top bot-specs"
-                                alt="bot imgae"                
+                                alt="bot imgae"
+                                onClick={() => handleBotSpecsClick({ id, name, health, damage, armor, bot_class, catchphrase, avatar_url })}               
                             />
                             <div className="card-body card-name bot-specs">
                                 <h5 className="card-title">{name} <span>  {getBotIcon(bot_class)}</span></h5>
@@ -57,7 +60,7 @@ function BotCollection ({ bots, addToFavorites, addToArmy, selectedFilters }){
                 )}
             </div>
             {/* conditionally render the modal component based on the state */}
-            {isModalOpen && <BotModal onClose={() => setModalOpen(false)} />}
+            { selectedBot && <BotModal bot={selectedBot} onClose={() => setSelectedBot(null)} />}
             
         </>
     )
