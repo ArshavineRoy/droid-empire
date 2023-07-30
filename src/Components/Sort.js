@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Filter from './Filter';
 
-function Sort (){
+function Sort ({ handleFilterChange }){
   const [filterVisible, setFilterVisible] = useState(false);
 
   const handleFilterToggle = () => {
@@ -58,7 +58,7 @@ function Sort (){
         ></i>
       </div>
       {filterVisible && (
-        < Filter />
+        < Filter onFilterChange={handleFilterChange} />
       )}
     </>
   );

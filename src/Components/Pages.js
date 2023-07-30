@@ -10,9 +10,11 @@ function Pages (){
     const [bots, setBots] = useState([]);
     const [favorites, setFavorites] = useState([]);
     const [army, setArmy] = useState([]);
+    const [selectedFilters, setSelectedFilters] = useState([]);
 
-    useEffect(() => 
-        fetchData, [])
+    useEffect(() => {
+        fetchData();
+    }, []);
 
     function fetchData() {
         fetch ("http://localhost:3000/bots")
@@ -35,13 +37,18 @@ function Pages (){
     function dischargeFromArmy(botId){
         setArmy((prevArmy) => prevArmy.filter((bot) => bot.id !== botId))
     }
+    
+    // Function to update selected filters
+    function handleFilterChange (filters) {
+        setSelectedFilters(filters);
+    };
 
     return (
     
         <section className="container bot-container px-0">
-            <Sort />
+            <Sort handleFilterChange={handleFilterChange}/>
             <Routes>
-                <Route path="/" element={<BotCollection bots={bots} setBot={setBots} addToFavorites={addToFavorites} addToArmy={addToArmy} />}></Route>
+                <Route path="/" element={<BotCollection bots={bots} setBot={setBots} addToFavorites={addToFavorites} addToArmy={addToArmy} selectedFilters={selectedFilters} />}></Route>
                 <Route path="/favorites" element={<Favorites favorites={favorites} removeFromFavorites={removeFromFavorites} addToArmy={addToArmy} />}></Route>
                 <Route path="/army" element={<Army army={army} dischargeFromArmy={dischargeFromArmy} />}></Route>
             </Routes>

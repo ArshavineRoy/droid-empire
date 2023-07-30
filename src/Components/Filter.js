@@ -1,4 +1,4 @@
-import React,  { useState } from 'react';
+import React,  { useState, useEffect } from 'react';
 
 function Filter ({ onFilterChange }) {
     const [selectedFilters, setSelectedFilters] = useState([]);
@@ -11,6 +11,7 @@ function Filter ({ onFilterChange }) {
           setSelectedFilters((prevSelectedFilters) => prevSelectedFilters.filter((filter) => filter !== value));
         }
     };
+    
 
     useEffect(() => {
         if (onFilterChange) {
