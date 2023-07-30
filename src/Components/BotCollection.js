@@ -4,19 +4,19 @@ import getBotIcon from "./getBotIcon"; // Import the getBotIcon helper function
 
 function BotCollection ({ bots, addToFavorites, addToArmy, selectedFilters }){
 
+    const [isModalOpen, setModalOpen] = useState(false);
+
+    // Function to handle click events on bot specs
+    const handleBotSpecsClick = () => {
+      setModalOpen(true);
+    };
+
+
     // Filtering bots based on selected filters: at least one criteria should be selected,
     // otherwise, work with original bots
     // Check if if they have the classes in selectedFilters. Use this list to map and render
     const filteredBots = selectedFilters.length > 0 ? bots.filter(
         bot => selectedFilters.includes(bot.bot_class)) : bots;
-
-
-    const [isModalOpen, setModalOpen] = useState(false);
-
-    // Function to handle click events on bot specs
-    const handleBotSpecsClick = () => {
-        setModalOpen(true);
-    };
 
     return (
         <>
@@ -57,7 +57,7 @@ function BotCollection ({ bots, addToFavorites, addToArmy, selectedFilters }){
                 )}
             </div>
             {/* conditionally render the modal component based on the state */}
-            {isModalOpen && <BotModal />}
+            {isModalOpen && <BotModal onClose={() => setModalOpen(false)} />}
             
         </>
     )
