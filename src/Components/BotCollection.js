@@ -1,13 +1,19 @@
 import getBotIcon from "./getBotIcon"; // Import the getBotIcon helper function
 
-function BotCollection ({ bots, addToFavorites, addToArmy }){
+function BotCollection ({ bots, addToFavorites, addToArmy, selectedFilters }){
+
+    // Filtering bots based on selected filters: at least one criteria should be selected,
+    // otherwise, work with original bots
+    // Check if if they have the classes in selectedFilters. Use this list to map and render
+  const filteredBots = selectedFilters.length > 0 ? bots.filter(
+    bot => selectedFilters.includes(bot.bot_class)) : bots;
 
     return (
         <>
             <h3>Bot Collection</h3>
             <div className="collection display-bots flex-wrap" >
-                {bots.length === 0 ? (<h3>No bots available at this time. </h3>) : (
-                    bots.map(({id, name, health, damage, armor, bot_class, catchphrase, avatar_url}) => (
+                {filteredBots.length === 0 ? (<h3>No bots available at this time. </h3>) : (
+                    filteredBots.map(({id, name, health, damage, armor, bot_class, catchphrase, avatar_url}) => (
                         <div className="card" key={id}>
                             <img 
                                 src={avatar_url}
