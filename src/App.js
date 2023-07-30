@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./Components/Navbar";
-import Hero from "./Components/Hero";
+import Carousel from "./Components/Carousel";
 import Body from "./Components/Body";
 import Footer from "./Components/Footer";
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
        <Navbar />
-       <Hero />
+       <Carousel />
        <Body />
        <Footer/>
     </>

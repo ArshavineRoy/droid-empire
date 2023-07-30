@@ -27,6 +27,39 @@ code {
   background-color: #d65693;
   color: #fff;
 }
+
+#carouselExampleAutoplaying {
+  /* Set the height of the carousel container as needed */
+  height: 500px; /* Adjust this value to fit your design */
+  overflow: hidden; /* Hide any overflowing content */
+}
+
+.carousel-inner {
+  /* Make sure the carousel inner content is positioned at the top */
+  display: flex;
+  align-items: flex-start;
+
+  /* Set the height and width of the carousel inner to cover the container */
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-item {
+  /* Set the width of each carousel item to match the container width */
+  flex: 0 0 100%;
+}
+
+.image-overlay {
+  /* Set the height of the image overlay to cover the container */
+  height: 100%;
+
+  /* Ensure the background image covers the overlay and maintains aspect ratio */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top; /* This is what aligns the center top of the image */
+}
+
+
 .sort {
   padding: 10px;
   border-radius: 8px;
@@ -58,10 +91,10 @@ code {
 
 /* filter icon */
 .sort .fa-filter {
-  font-size: 24px;
   color: #d30993;
   cursor: pointer;
   margin-left: 10px;
+  font-size: 30px;
 
 }
 

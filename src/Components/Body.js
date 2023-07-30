@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import BotCollection from "./BotCollection";
+import Sort from "./Sort";
 
 
 function Body (){
@@ -19,7 +20,7 @@ function Body (){
     return (
     
         <section className="container bot-container px-0">
-
+            <Sort />
             <BotCollection bots={bots} setBot={setBots}/>
 
         </section>
