@@ -14,11 +14,6 @@ code {
 }
 
 
-/* container div */
-/* .bot-container{
-  border: 1px solid blue;
-} */
-
 .navbar {
   position: sticky;
   top: 0;
@@ -27,6 +22,12 @@ code {
 .navbar-brand {
   color: #d65693; 
   font-weight: bold;
+  margin-right: 60px;
+  margin-left: 20px;
+}
+
+.nav-link {
+  color: #1c2331;
 }
 
 .login {
@@ -38,37 +39,33 @@ code {
   margin-right: 3px;
 }
 
+/* carousel */
+
 #carouselExampleAutoplaying {
-  /* Set the height of the carousel container as needed */
-  height: 500px; /* Adjust this value to fit your design */
-  overflow: hidden; /* Hide any overflowing content */
+  height: 500px; 
+  overflow: hidden;
 }
 
 .carousel-inner {
-  /* Make sure the carousel inner content is positioned at the top */
+
   display: flex;
   align-items: flex-start;
-
-  /* Set the height and width of the carousel inner to cover the container */
   height: 100%;
   width: 100%;
 }
 
 .carousel-item {
-  /* Set the width of each carousel item to match the container width */
   flex: 0 0 100%;
 }
 
 .image-overlay {
-  /* Set the height of the image overlay to cover the container */
   height: 100%;
-
-  /* Ensure the background image covers the overlay and maintains aspect ratio */
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center top; /* This is what aligns the center top of the image */
+  background-position: center top;
 }
 
+/* sort bar */
 
 .sort {
   padding: 10px;
