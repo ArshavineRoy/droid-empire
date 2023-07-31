@@ -16,33 +16,7 @@ This application is the one and only spot in the known universe where you
 can custom build your own Bot Army! Core features include browsing through
 a list of robots, viewing a robot's details, and enlist a bot into your army.
 
-  ![homepage](public/droid-home.png)
-
-## Features
-
-- View all bots on the homepage, use `Favorite` and `Enlist` buttons to add to favorites or enlist in your army.
-
-  ![bot-collection](public/view-bots.png)
-
-- Click on an image to view a bot's specs
-
-  ![bot-specs](public/bot-specs.png)
-
-- `Filter` bots by class
-
-  ![filter](public/filter-bots.png)
-
-- See your favorites
-
-  ![favorites](public/favorites.png)
-
-- See your army
-
-  ![homepage](public/army.png)
-
-- `Alert` if no bots found
-
-  ![no-bots](public/no-bots.png)
+![homepage](public/droid-home.png)
 
 ## Dependencies
 
@@ -62,6 +36,12 @@ Before running this app, make sure you have the following installed on your syst
 - React Bootstrap (v2.8.0)
 - React Modal (v3.16.1)
 - React Router DOM (v6.14.2 or later)
+
+## View deployed project
+
+```
+https://droid-empire.web.app/
+```
 
 ## Project Setup
 
@@ -202,6 +182,33 @@ A user should be able to:
   `SortBar`.
 - Only enlist **one** bot from each `bot_class`. The classes are
   `["Support", "Medic", "Assault", "Defender", "Captain", "Witch"]`.
+
+## Features
+
+- View all bots on the homepage, use `Favorite` and `Enlist` buttons to add to favorites or enlist in your army.
+
+  ![bot-collection](public/view-bots.png)
+
+- Click on an image to view a bot's specs
+
+  ![bot-specs](public/bot-specs.png)
+
+- `Filter` bots by class
+
+  ![filter](public/filter-bots.png)
+
+- See your favorites
+
+  ![favorites](public/favorites.png)
+
+- See your army
+
+  ![homepage](public/army.png)
+
+- `Alert` if no bots found
+
+  ![no-bots](public/no-bots.png)
+
 
 ## Author & License
 

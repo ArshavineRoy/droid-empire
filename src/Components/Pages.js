@@ -17,7 +17,7 @@ function Pages (){
     }, []);
 
     function fetchData() {
-        fetch ("http://localhost:3000/bots")
+        fetch ("https://droid-empire-server.onrender.com/bots")
         .then (r => r.json())
         .then (bots => setBots(bots))
     } 
